@@ -1,8 +1,8 @@
 import Link from "next/link"
 
 const pillars = [
-  ["01", "Read", "Build a steady Tamil reading habit with clear, welcoming lessons."],
-  ["02", "Learn", "Strengthen understanding through guided Islamic knowledge."],
+  ["01", "Read", "Build a steady knowledge of Islam with clear, welcoming lessons."],
+  ["02", "Learn", "Strengthen understanding in Tamil through guided Islamic Quizzes."],
   ["03", "Grow", "Keep learning together with family and community."],
 ]
 
