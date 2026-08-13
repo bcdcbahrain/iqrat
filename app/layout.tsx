@@ -1,49 +1,15 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Geist, Geist_Mono, Newsreader } from 'next/font/google'
 import './globals.css'
 
-export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
-}
+const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })
+const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const newsreader = Newsreader({ subsets: ['latin'], variable: '--font-newsreader' })
 
-export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
-}
+export const metadata: Metadata = { title: 'IQRA Tamil | Learn, Reflect, Grow', description: 'A welcoming Islamic learning foundation for Tamil-speaking families and communities.' }
+export const viewport: Viewport = { colorScheme: 'light', themeColor: '#f7f5ed', width: 'device-width', initialScale: 1 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en">
-      <body className="antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
-    </html>
-  )
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="ta" className="bg-background"><body className={`${geist.variable} ${geistMono.variable} ${newsreader.variable} antialiased`}>{children}{process.env.NODE_ENV === 'production' && <Analytics />}</body></html>
 }
