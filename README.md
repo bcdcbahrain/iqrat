@@ -14,7 +14,7 @@ IQRA Tamil is an independent foundation for a Tamil Muslim educational platform.
 
 ## Development direction
 
-Future application work can be built independently from this foundation, with authentication and persistent learning progress introduced as requirements become concrete. When persistence is needed, the project can use the recommended Neon + Drizzle + Better Auth stack.
+Future application work can be built independently from this foundation, and persistent learning progress introduced as requirements become evident. 
 
 ## Run locally
 
